@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playground hello.html</title>
+</head>
+<body>
+    {% if name %}
+    <h1>hello {{name}}</h1>
+    {%else%}
+    <h1>hello world</h1>
+    <h3></h3>
+    {% endif %}
+
+    {% for tag in tags %}
+        <ul>
+            {{tag}}
+        </ul>
+    {% endfor %}
+    <!-- <ul>
+        {% for order in orders %}
+            <h4>Order_id: {{ order.id }} - Customer_name: {{order.customer.first_name}} - payment: {{order.payment_status}}</h4>
+            <span>Order_items:</span>
+            <ul>
+                {% for item in order.orderitem_set.all %}
+                    <li>title: {{item.product.title}} - unit_price: {{item.product.unit_price}} </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul> -->
+
+</body>
+</html>
